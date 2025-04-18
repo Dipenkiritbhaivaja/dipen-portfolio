@@ -1,0 +1,406 @@
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    background-color: rgb(28, 27, 27);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Particles */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('particles.png');
+    /* You can use JS to animate particles */
+    opacity: 0.3;
+}
+
+/* Hero Content */
+.hero-content {
+    color: rgb(229, 218, 218);
+    max-width: 50%;
+    text-align: left;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.neon-text {
+    /* color: var(--themeColor); */
+    background: var(--animatedText);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 10s linear infinite;
+    text-shadow:
+        20px 0 10px currentColor,
+        20px 0 20px currentColor,
+        20px 0 30px currentColor;
+}
+
+/* Typing Animation Text */
+.typing-text {
+    font-size: 1.8rem;
+    background: var(--animatedText);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 10s linear infinite;
+    text-shadow:
+        20px 5px 10px currentColor,
+        20px 5px 20px currentColor,
+        20px 5px 30px currentColor;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1.2rem;
+    color: rgb(28, 27, 27);
+    background: var(--themeColor);
+    text-decoration: none;
+    border-radius: 8px 20px;
+    box-shadow: 0 0 15px rgb(47, 165, 255, 0.6);
+    transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px var(--themeColor);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--themeColor);
+    color: var(--themeColor);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.85);
+    color: black;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    z-index: 2;
+    animation: slideIn 1.5s ease-out;
+}
+
+.profile-pic {
+    width: 350px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--themeColor);
+    box-shadow: 0 0 30px rgba(0, 221, 255, 0.812);
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Image Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== HERO SOCIAL ICONS ===== */
+.hero-socials {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.hero-socials .social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 10px rgb(47, 165, 255, 0.3);
+    text-decoration: none;
+    position: relative;
+}
+
+/* Platform Colors (Match Your Footer Exactly) */
+.hero-socials .linkedin {
+    background-color: #0077b5;
+}
+
+.hero-socials .github {
+    background-color: #333;
+}
+
+.hero-socials .fiverr {
+    background-color: #1dbf73;
+}
+
+.hero-socials .instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.hero-socials .facebook {
+    background-color: #1877f2;
+}
+
+/* Hover Effects (Same as Footer) */
+.hero-socials .social-link:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--themeColor);
+}
+
+.hero-socials .social-link i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-socials .social-link:hover i {
+    transform: rotate(360deg);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero-socials {
+        left: 15px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-socials {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        transform: none;
+        margin-top: 30px;
+        order: 3;
+        width: 100%;
+    }
+
+    .hero-socials::after {
+        display: none;
+    }
+}
+
+/* HERO SECTION - RESPONSIVE ADDITIONS */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 100px 5% 50px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin: 30px 0;
+        animation: none;
+    }
+
+    .profile-pic {
+        width: 280px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .typing-text {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 8px;
+    }
+
+    .profile-pic {
+        width: 240px;
+        height: 320px;
+    }
+
+    /* Social icons adjustment */
+    .hero-socials .social-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 180px;
+        margin: 5px 0;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 260px;
+    }
+}
+
+
+/* HERO OBJECTIVE STYLES */
+.hero-objective-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.hero-objective {
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 5%;
+}
+
+.hero-objective blockquote {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 25px 30px;
+    border: 2px solid rgba(47, 165, 255, 0.3);
+    background: rgba(28, 27, 27, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    transition: all 0.4s ease;
+}
+
+.hero-objective blockquote::before,
+.hero-objective blockquote::after {
+    color: var(--themeColor);
+    font-size: 3rem;
+    position: absolute;
+    opacity: 0.3;
+    font-family: serif;
+    line-height: 1;
+}
+
+.hero-objective blockquote::before {
+    content: open-quote;
+    top: 10px;
+    left: 15px;
+}
+
+.hero-objective blockquote::after {
+    content: close-quote;
+    bottom: -15px;
+    right: 15px;
+}
+
+.hero-objective:hover blockquote {
+    border-color: var(--themeColor);
+    background: rgba(28, 27, 27, 0.9);
+    box-shadow: 0 5px 25px rgba(47, 165, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-objective-container {
+        position: static;
+        margin-top: 40px;
+        padding: 0 5%;
+    }
+
+    .hero-objective {
+        width: 100%;
+    }
+
+    .hero-objective blockquote {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-objective blockquote {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .hero-objective blockquote::before,
+    .hero-objective blockquote::after {
+        font-size: 2rem;
+    }
+
+    .hero-objective blockquote::before {
+        left: 5px;
+    }
+
+    .hero-objective blockquote::after {
+        right: 5px;
+    }
+}

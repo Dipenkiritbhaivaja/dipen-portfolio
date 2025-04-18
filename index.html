@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipen's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header (Navbar) -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo">DIPEN VAJA</div>
+            </div>
+
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hey, I am <span class="neon-text">DIPEN</span></h1>
+            <h2>
+                < I am <span id="typed-text" class="typing-text"></span>
+            </h2>
+            <h2>
+                < Technologies <span id="technologies" class="typing-text"></span>
+            </h2>
+            <p class="hero-description">Passionate about Python, AI, and Web Development.</p>
+            <div class="hero-buttons">
+                <a href="Resume.pdf" class="btn">Download CV</a>
+                <a href="https://github.com/Dipenkiritbhaivaja" class="btn btn-outline">GitHub</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/dipen2.jpeg" alt="Dipen's Image" class="profile-pic">
+        </div>
+        <div class="hero-socials">
+            <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Dipenkiritbhaivaja" target="_blank" class="social-link github"
+                aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:dipenvaja.dev@gmail.com" class="social-link fiverr" aria-label="Fiverr">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </a>
+
+        </div>
+
+        <!-- Objective Section at Bottom -->
+        <div class="hero-objective-container">
+            <div class="hero-objective">
+                <blockquote>
+                    I want to work with an organization where I can solve real-world problems, contribute to the world,
+                    and
+                    establish myself professionally, socially, and financially by applying the knowledge and skills
+                    acquired
+                    during my education
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- education section -->
+    <section id="education">
+        <h2>🎓 <b>Education Details</b></h2>
+        <div class="education-container">
+            <!-- SSC -->
+            <div class="education-card">
+                <h3><i class="fa-solid fa-school" style="color: #fbff00;"></i> <b>SSC Completion</b></h3>
+                <ul>
+                    <li><i class="fa-solid fa-school" style="color: #ff9500;"></i> <b>Board:</b> Shree Saraswati
+                        Science
+                        School,
+                        Porbandar</li>
+                    <li><i class="fa-solid fa-book" style="color: #38f2ff;"></i> <b>Result:</b> 78%</li>
+                </ul>
+            </div>
+
+            <!-- Diploma -->
+            <div class="education-card">
+                <h3><i class="fa-solid fa-laptop-code" style="color: #ff00e1;"></i> <b>Diploma</b></h3>
+                <ul>
+                    <li><i class="fa-solid fa-book-open-reader" style="color: #ff00a2;"></i> <b>Course:</b> Computer
+                        Engineering</li>
+                    <li><i class="fa-solid fa-building-columns" style="color: #005eff;"></i> <b>College:</b> Polytechnic
+                        of
+                        Porbandar</li>
+                    <li><i class="fa-solid fa-chart-line" style="color: #11ff00;"></i><b>Result:</b> 7.67 CGPA</li>
+                </ul>
+            </div>
+
+            <!-- B-Tech -->
+            <div class="education-card">
+                <h3><i class="fa-solid fa-code" style="color: #0091ff;"></i> <b>B-Tech</b></h3>
+                <ul>
+                    <li><i class="fa-solid fa-computer" style="color: #ffaa00;"></i> <b>Field:</b> Information
+                        Technology
+                    </li>
+                    <li><i class="fa-solid fa-graduation-cap" style="color: #00e1ff;"></i> <b>College:</b> Dr. Subhash
+                        University, Junagadh</li>
+                    <li><i class="fa-solid fa-chart-line" style="color: #11ff00;"></i> <b>Result:</b> 9.64 CGPA</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Graph -->
+        <div class="graph-container">
+            <canvas id="resultChart"></canvas>
+        </div>
+        <p>Semester Wise Result of B-tech in IT</p>
+    </section>
+    <hr>
+
+    <!-- Language Section -->
+    <section id="languages">
+        <h2 class="section-title">Language Proficiency</h2>
+        <div class="language-container">
+            <table class="language-table">
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th><i class="fas fa-comment-dots"></i> Speak</th>
+                        <th><i class="fas fa-pen-fancy"></i> Write</th>
+                        <th><i class="fas fa-brain"></i> Understand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English</td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Gujarati</td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                        <td><i class="fas fa-check-circle success"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <hr>
+
+    <!-- skill section -->
+    <section id="skills">
+        <h2 class="section-title">My Tech Stack</h2>
+        <div class="skills-container">
+
+            <!-- Python -->
+            <div class="skill-card">
+                <i class="fa-brands fa-python skill-icon python"></i>
+                <h3>Python</h3>
+                <div class="skill-progress" style="--skill-percent:65%; --skill-color:#aed236">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">65%</span>
+                </div>
+                <p>Fundamentals, OOPs, Flask Framework</p>
+            </div>
+
+            <!-- PHP -->
+            <div class="skill-card">
+                <i class="fa-brands fa-php skill-icon php"></i>
+                <h3>PHP</h3>
+                <div class="skill-progress" style="--skill-percent:70%; --skill-color:#aed236">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">70%</span>
+                </div>
+                <p>Concepts : Fundamentas, OOPS, session/cookie</p>
+                <p>Database : db_connectivity, CRUD</p>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-card">
+                <i class="fa-brands fa-js-square skill-icon javascript"></i>
+                <h3>JavaScript</h3>
+                <div class="skill-progress" style="--skill-percent:60%; --skill-color:#F7DF1E">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">60%</span>
+                </div>
+                <p>Frameworks: Node. js, Express.js</p>
+            </div>
+
+            <!-- HTML & CSS -->
+            <div class="skill-card">
+                <i class="fa-solid fa-code skill-icon html-css"></i>
+                <h3>HTML & CSS</h3>
+                <div class="skill-progress" style="--skill-percent:85%; --skill-color:#E34C26">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">85%</span>
+                </div>
+                <p>Frameworks: Bootstrap, Tailwind CSS</p>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card">
+                <i class="fa-solid fa-database skill-icon database"></i>
+                <h3>SQL & Databases</h3>
+                <div class="skill-progress" style="--skill-percent:60%; --skill-color:#4DB33D">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">60%</span>
+                </div>
+                <p>commands : DDL, DCL, DML, JOINS, sub query</p>
+                <p>Oracle, MySQL</p>
+            </div>
+
+            <!-- AI & Machine Learning -->
+            <div class="skill-card">
+                <i class="fa-brands fa-java skill-icon ai"></i>
+                <h3>Java</h3>
+                <div class="skill-progress" style="--skill-percent:30%; --skill-color:#FF4081">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">30%</span>
+                </div>
+                <p>Image processing, </p>
+            </div>
+
+            <!-- Git & Version Control -->
+            <div class="skill-card">
+                <i class="fa-brands fa-git-alt skill-icon git"></i>
+                <h3>Version Control</h3>
+                <div class="skill-progress" style="--skill-percent:50%; --skill-color:#F34F29">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="percent-text">50%</span>
+                </div>
+                <p>Git, GitHub</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <!-- Odd Project (Image Left) -->
+        <div class="project-row">
+            <div class="project-image left-image">
+                <img src="images/p1.png" alt="Krishna's Kitchen">
+                <div class="image-hover-effect"></div>
+            </div>
+            <div class="project-details right-details">
+                <div class="details-container">
+                    <h3>Krishna's Kitchen</h3>
+                    <p class="project-description">Krishna's Kitchen is a frontend only responsive food ordering website
+                        built using HTML, CSS, Bootstrap, and JavaScript.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>infinityfree</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dipen.great-site.net/krishna_kitchen" target="_blank"
+                            class="project-btn live-demo">Live Demo</a>
+                        <!-- <a href="#" class="project-btn view-code">View Code</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Even Project (Image Right) -->
+        <div class="project-row">
+            <div class="project-details left-details">
+                <div class="details-container">
+                    <h3>Netflix Clone</h3>
+                    <p class="project-description">Netflix Clone is a frontend-only project built with HTML and CSS.
+                        It replicates the UI of Netflix with responsive design.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>infinityfree</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dipen.great-site.net/mystreaming-platform" target="_blank"
+                            class="project-btn live-demo">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-image right-image">
+                <img src="images/netflix_pro.png" alt="Netflix Clone">
+                <div class="image-hover-effect"></div>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-image left-image">
+                <img src="images/note_project.png" alt="Krishna's Kitchen">
+                <div class="image-hover-effect"></div>
+            </div>
+            <div class="project-details right-details">
+                <div class="details-container">
+                    <h3>QuickNote - Your Personal Web Notebook</h3>
+                    <p class="project-description">A responsive web application to create, read, update, and delete
+                        personal notes. Built using PHP, MySQL, and Bootstrap
+                        with secure HTTPS hosting.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>BOOTSTRAP</span>
+                        <span>PHP</span>
+                        <span>MYSQL</span>
+                        <span>infinityfree</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dipen.great-site.net/mynotes/" target="_blank"
+                            class="project-btn live-demo">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-details left-details">
+                <div class="details-container">
+                    <h3>User Authentication System</h3>
+                    <p class="project-description">I have built this user Authentication System with Html, Bootstrap and
+                        PHP | Hosted on infinityfree
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>Bootstrap</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>infinityfree</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dipen.great-site.net/mystreaming-platform" target="_blank"
+                            class="project-btn live-demo">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-image right-image">
+                <img src="images/proj_auth.png" alt="Netflix Clone">
+                <div class="image-hover-effect"></div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2>Certificates</h2>
+        <div class="certificates-container">
+            <div class="certificate-card">
+                <img src="images/cer_techsaksham.png" alt="Python Certification" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Python Certification</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_js.png" alt="Python Certification" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Python Certificate</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_python.png" alt="Web Development Bootcamp" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Web Development Bootcamp</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_aitools.png" alt="AI & ML Course" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>AI & ML Course</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_java.png" alt="Web Development Bootcamp" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Web Development Bootcamp</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_uiux.png" alt="AI & ML Course" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>AI & ML Course</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_aibadge.png" alt="Python Certification" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Python Certification</h3>
+                </div> -->
+            </div>
+            <div class="certificate-card">
+                <img src="images/cer_bootstrap.png" alt="Python Certification" class="certificate-img">
+                <!-- <div class="certificate-info">
+                    <h3>Python Certification</h3>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔥 Modal for Full-Screen Image -->
+    <div id="certificateModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullCertificate">
+    </div>
+    <hr>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:dipenvaja@gmail.com">dipenvaja.dev@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone: <a href="tel:+6354312226">&nbsp;63543&nbsp;&nbsp;12226</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Location: Junagadh, Gujarat, India</p>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="from_name" placeholder="Your Name" required />
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="reply_to" placeholder="Your Email" required />
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-comment"></i>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-link linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Dipenkiritbhaivaja" target="_blank" class="social-link github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:dipenvaja.dev@gmail.com" class="social-link fiverr" aria-label="Fiverr">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </a>
+        </div>
+        <p class="footer-text">© 2025 Dipen's Portfolio | Explore Dipen's Work</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+    <!-- Added Graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- To get mail -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("b0koJpATS4kK6QCzh"); // Replace with your actual public key
+        })();
+
+
+        const form = document.querySelector(".contact-form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("dipenvaja.dev@gmail.com", "template_rl7goek", this)
+                .then(() => {
+                    alert("Message sent successfully!");
+                    form.reset();
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    alert("Failed to send message. Please try again.");
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>

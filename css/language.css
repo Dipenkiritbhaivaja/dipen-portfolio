@@ -1,0 +1,143 @@
+/* ===== LANGUAGE SECTION ===== */
+#languages {
+    padding: 60px 10%;
+    background-color: rgb(28, 27, 27);
+    text-align: center;
+}
+
+.language-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.language-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(47, 165, 255, 0.2);
+}
+
+.language-table th {
+    padding: 15px;
+    color: var(--themeColor);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(47, 165, 255, 0.1);
+}
+
+.language-table td {
+    padding: 15px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.language-table tr:last-child td {
+    border-bottom: none;
+}
+
+.language-table tr:hover td {
+    background: rgba(47, 165, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.language-table i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.language-table .success {
+    color: #aed236;
+    /* Matches your Python icon color */
+}
+
+.language-table .warning {
+    color: #FF4081;
+    /* Matches your AI icon color */
+}
+
+.language-table th i {
+    margin-right: 8px;
+    color: var(--themeColor);
+}
+
+.language-table th {
+    background: linear-gradient(90deg,
+            rgba(47, 165, 255, 0.2),
+            rgba(47, 165, 255, 0.4));
+    position: relative;
+    overflow: hidden;
+}
+
+.language-table th::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.language-table th:hover::after {
+    left: 100%;
+}
+
+
+/* Responsive Table */
+@media (max-width: 600px) {
+
+    .language-table th,
+    .language-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .language-table th i {
+        display: block;
+        margin: 0 auto 5px;
+    }
+
+    .language-table th span {
+        display: none;
+    }
+
+    .language-table th::after {
+        content: attr(data-title);
+        display: inline;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .language-table th,
+    .language-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .language-table th i {
+        display: block;
+        margin: 0 auto 5px;
+    }
+
+    .language-table th span {
+        display: none;
+    }
+
+    .language-table th::after {
+        content: attr(data-title);
+        display: inline;
+    }
+}
